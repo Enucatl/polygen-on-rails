@@ -65,4 +65,5 @@ QUANTITY ::= [average] (dose | [exposure] time | throughput | temperature | flux
 "Talbot" order | "source-to-detector" distance | coherence | bandwidth |
 "Fresnel fringes") [per QUANTITY];
 
-CONNECTOR ::= ing: (instead of | rather than ) | [>(and | or)] [maybe] [also] ;
+CONNECTOR ::= ing: (instead of | rather than ) | [>(and | or)] [maybe]
+[also] to: to;
