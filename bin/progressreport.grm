@@ -47,7 +47,8 @@ OBJECT ::= nr: (rotation | x | y | z | zz) axis | amount of data | "p-value"
 +ground truth | "contrast-to-noise" ratio | "signal-to-noise ratio" |
 cluster | ++(old | new | python) pipeline | monochromator | source size | silicon 111 |
 alignment |
-[high] throughput | >QUANTITY | >(pink | white | monochromatic) beam | r: >(speed | range | endpoint | fit) of the OBJECT.nr;
+[high] throughput | >QUANTITY | >(pink | white | monochromatic) beam
+spectrum | beam energy | r: >(speed | range | endpoint | fit) of the OBJECT.nr;
 
 QUANTITY ::= (dose | [exposure] time | throughput | flux | "SNR" | "CNR" | photons | speed
 | "region-of-interest" | "ROI" | pixel size | size | resolution | pixels |
