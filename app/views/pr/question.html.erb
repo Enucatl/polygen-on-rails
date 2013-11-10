@@ -1,11 +1,8 @@
-<%= stylesheet_link_tag "default" %>
-<% polygen_binary = Rails.root.join("bin", "polygen").to_s %>
-<% grammar_file = Rails.root.join("bin", "progressreport.grm").to_s %>
-<% polygen = IO.popen(polygen_binary + " " + grammar_file) %>
+<% polygen_name = polygen("polygen.grm") %>
+<% content_for :title, polygen_name + " Questions" %>
+<% content_for :description do %>My Description<% end %>
 
 <h1>Generator of progress report questions</h1>
 <p class="bottom-space">Results vary from boringly nonsensical to creepily accurate.</p>
 <p><a href="javascript:window.location.reload()">Reload</A> to get a new question.</p>
-<h2 class="bottom-space"><%= polygen.read %></h2>
-<p>Powered by <a href="http://www.polygen.org/">polygen</a> and <a href="http://www.rubyonrails.org/">Ruby on Rails</a>.
-Full <a href="https://bitbucket.org/Enucatl/polygen-ror/overview">source code</a>.</p>
+<h2 class="bottom-space"><%= polygen("progressreport.grm") %></h2>
