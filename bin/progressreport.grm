@@ -1,0 +1,57 @@
+I ::= "title:    Progress Reports"
+^ "author:   Matteo\n"
+^ "language: english\n"
+^ "status:   \n"
+^ "topic:    \n"
+^ "audience: \n"
+^ "comment: \n"
+^ "created:  9/11/2013"
+;
+
+S ::= \[THANKS] \[SLIDEREF.(Q|O|P)] [USELESS] QUESTION;
+
+USELESS ::= (so | also | therefore) ^",";
+
+VERY ::= v^(e^)+ ry ;
+
+THANKS ::= [(thanks | thank you) for the] [VERY] (+impressive | nice | good | interesting | -boring) (presentation |
+work | results | experiment) ^"." ;
+
+SLIDEREF ::= (Q:((can | could | would) you) | O:_) (Q: go to | O: go to | P: on)
+slide SLIDENUMBER. ^ (Q: "?"\ | O: ", please."\ | P: ",");
+
+SLIDENUMBER ::= DIGITS | SLIDENUMBER.nonzero [^SLIDENUMBER.] ;
+
+DIGITS ::= zero: 0 | nonzero: >(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) ;
+
+QUESTION ::= DID;
+
+CORESUBPHRASE ::= (to: to | ing: _) (to: ACTION.to | ing: ACTION.ing) the OBJECT.;
+
+SUBPHRASE ::=  (to: CORESUBPHRASE.to | ing: CORESUBPHRASE.ing) [[^","] (to: CONNECTOR.to | ing: CONNECTOR.ing) (to: CORESUBPHRASE.to | ing: CORESUBPHRASE.ing)];
+
+DID ::= (do | did | would) you (VERB SUBPHRASE).(to|ing) ^"?";
+
+VERB ::= to: (+try | suggest | -prefer | claim | offer) | ing: ([dis^]agree on | recommend | advise | (put | push)
+forward);
+
+ACTION ::= (compar (to: ^e | ing: ^ing)) [to] | (chang (to: ^e | ing: ^ing)) |
+(improv (to: ^e | ing: ^ing)) | (increas (to: ^e | ing: ^ing)) | (extend
+(to: _ | ing: ^ing)) | (speed (to: _ | ing: ^ing) up) | (slow (to: _ | ing:
+^ing) down) | (reduc (to: ^e | ing: ^ing)) | (investigat (to: ^e | ing:
+^ing)) | (explain (to: _ | ing: ^ing)) | (align (to: _ | ing: ^ing)) |
+(submit (to: _ | ing: ^ting)) | (review (to: _ | ing: ^ing)); 
+
+OBJECT ::= nr: (rotation | x | y | z | zz) axis | amount of data | "p-value"
+| plot | sample | grating[^s] | slit[^s] | dose | +gold standard |
++ground truth | "contrast-to-noise" ratio | "signal-to-noise ratio" |
+cluster | ++(old | new | python) pipeline | monochromator | source size | silicon 111 |
+alignment |
+[high] throughput | >QUANTITY | >(pink | white | monochromatic) beam | r: >(speed | range | endpoint | fit) of the OBJECT.nr;
+
+QUANTITY ::= (dose | [exposure] time | throughput | flux | "SNR" | "CNR" | photons | speed
+| "region-of-interest" | "ROI" | pixel size | size | resolution | pixels |
+"Talbot" order | "source-to-detector" distance | coherence | bandwidth |
+"Fresnel fringes") [per QUANTITY];
+
+CONNECTOR ::= ing: (instead of | rather than ) | [>(and | or)] [maybe] [also] ;

@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag "default" %>
+<% polygen = IO.popen("bin/polygen bin/progressreport.grm") %>
+
+<h1>Generator of progress report questions</h1>
+<p>Results vary from boringly nonsensical to creepily accurate. Reload to get a new question.</p>
+<h2><%= polygen.read %></h2>
+<p>Powered by <a href="http://www.polygen.org/">polygen</a> and <a href="http://www.rubyonrails.org/">Ruby on Rails</a>.</p>
