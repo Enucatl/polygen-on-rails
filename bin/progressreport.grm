@@ -55,7 +55,7 @@ OBJECT ::= nr: (rotation | x | y | z | zz) axis | data | "p-value"
 space) | transform | grid | polar reconstruction | ct algorithm |
 algorithm[^s] | reconstruction algorithm | local tomography | sinogram[^s] | 
 cluster | ++(old | new | python) pipeline | monochromator | source size | silicon 111 |
-alignment | area 
+alignment | area |
 [high] throughput | ++>QUANTITY | >(pink | white | monochromatic) beam
 spectrum | beam energy | r: >(-speed | range | (end|mid)^point | fit | amount
 | importance | relevance | capacity | power spectrum | efficiency | [sheer] size | distance | spectrum) of the OBJECT.nr;
