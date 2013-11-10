@@ -12,7 +12,8 @@ module ApplicationHelper
     def get_git_version()
         command = "git --git-dir=%s --work-tree=%s describe --always --dirty --abbrev=4" %[Rails.root.join(".git").to_s, Rails.root.to_s]
         version = IO.popen(command).read
-        return version.gsub!("-dirty", "-dir")
+        version_no_dirty = version.gsub("-dirty", "-dir")
+        return version_no_dirty
     end
 
 end
