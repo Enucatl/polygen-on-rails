@@ -55,7 +55,14 @@ OBJECT ::= nr: (rotation | x | y | z | zz) axis | data | "p-value"
 space) | transform | grid | polar reconstruction | ct algorithm |
 algorithm[^s] | reconstruction algorithm | local tomography | sinogram[^s] | 
 cluster | ++(old | new | python) pipeline | monochromator | source size | silicon 111 |
-alignment | area |
+alignment | area | forward transform | gridrec reconstruction | >(12 | 16 |
+32 | 64) bit dynamic range | dynamic range | saturation | full width half
+maximum | sigma | moment analysis | point spread function | edge camera |
+"DMP" files | focusing | scintillator | (x4 | x10 | x100) lens | optical
+table | line profile | gray scale | gray levels | homogeneity |
+inhomogeneity | isotropy | anisotropy | distribution | gaussian | flats |
+"flat-field" correction | nanoscope | "Zernike" contrast | slice | "Fourier"
+slice theorem | 
 [high] throughput | ++>QUANTITY | >(pink | white | monochromatic) beam
 spectrum | beam energy | r: >(-speed | range | (end|mid)^point | fit | amount
 | importance | relevance | capacity | power spectrum | efficiency | [sheer] size | distance | spectrum) of the OBJECT.nr;
