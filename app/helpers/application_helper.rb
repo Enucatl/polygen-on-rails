@@ -2,10 +2,10 @@ module ApplicationHelper
 
     #run the polygen on a grammar stored in the bin folder
     def polygen(grammar)
-        #polygen_binary = Rails.root.join("bin", "polygen").to_s 
-        #grammar_file = Rails.root.join("bin", grammar).to_s 
-        polygen_binary = "bin/polygen"
-        grammar_file = "bin/" + grammar
+        polygen_binary = Rails.root.join("bin", "polygen").to_s 
+        grammar_file = Rails.root.join("bin", grammar).to_s 
+        #polygen_binary = "bin/polygen"
+        #grammar_file = "bin/" + grammar
         full_command = polygen_binary + " " + grammar_file
         return IO.popen(full_command).read
     end
