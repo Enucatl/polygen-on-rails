@@ -42,13 +42,14 @@ ACTION ::= (compar (to: ^e | ing: ^ing)) [to] | (chang (to: ^e | ing: ^ing)) |
 ^ing) down) | (reduc (to: ^e | ing: ^ing)) | (investigat (to: ^e | ing:
 ^ing)) | (explain (to: _ | ing: ^ing)) | (align (to: _ | ing: ^ing)) |
 (measur (to: ^e | ing: ^ing)) | (install (to: _ | ing: ^ing)) |
+(manufactur (to: ^e | ing: ^ing)) | (produc (to: ^e | ing: ^ing)) |
 (correct (to: _ | ing: ^ing)) | (account (to: _ | ing: ^ing) for) |
 (imagin (to: ^e | ing: ^ing)) | (support (to: _ | ing: ^ing)) |
 (operat (to: ^e | ing: ^ing)) | (decreas (to: ^e | ing: ^ing)) |
 (extend (to: _ | ing: ^ing)) | (review (to: _ | ing: ^ing)); 
 
 OBJECT ::= nr: (rotation | x | y | z | zz) axis | data | "p-value"
-| plot | sample | grating[^s] | absorption | differential phase | "dark-field"
+| plot | sample | grating[^s] | perfect reconstruction | absorption | differential phase | "dark-field"
 | noise | accuracy | image quality | slit[^s] | dose | +gold standard |
 +ground truth | "contrast-to-noise" ratio | "signal-to-noise ratio" |
 >(contrast | noise | phase) transfer function | "Fourier" >(component |
@@ -60,7 +61,7 @@ alignment | area | forward transform | gridrec reconstruction | >(12 | 16 |
 maximum | sigma | moment analysis | point spread function | edge camera |
 "DMP" files | focusing | scintillator | (x4 | x10 | x100) lens | optical
 table | line profile | gray scale | gray levels | homogeneity |
-inhomogeneity | isotropy | anisotropy | distribution | gaussian | flats |
+inhomogeneity | isotropy | anisotropy | distribution | gaussian | pinhole | flats |
 "flat-field" correction | nanoscope | "Zernike" contrast | slice | "Fourier"
 slice theorem | 
 [high] throughput | ++>QUANTITY | >(pink | white | monochromatic) beam
@@ -68,7 +69,7 @@ spectrum | beam energy | r: >(-speed | range | (end|mid)^point | fit | amount
 | importance | relevance | capacity | power spectrum | efficiency | [sheer] size | distance | spectrum) of the OBJECT.nr;
 
 QUANTITY ::= [average] (dose | [exposure] time | throughput | temperature | flux | "SNR" | "CNR" | photons | speed
-| "region-of-interest" | "ROI" | pixel size | size | resolution | pixels |
+| "region-of-interest" | "ROI" | pixel size | size | aspect ratio | resolution | pixels |
 "Talbot" order | "source-to-detector" distance | coherence | bandwidth |
 "Fresnel fringes") [per QUANTITY];
 
