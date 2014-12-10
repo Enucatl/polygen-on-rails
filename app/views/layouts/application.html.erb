@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <%= stylesheet_link_tag "default" %>
-    <head>
-        <title><%= content_for?(:title) ? yield(:title) : "Polygen Questions" %></title>
-        <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Polygen Questions" %>">
-        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-        <%= csrf_meta_tags %>
-        <%= yield(:head) %>
-    </head>
-    <body>
+  <%= stylesheet_link_tag "default" %>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Polygen Questions" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Polygen Questions" %>">
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Generator of progress report questions</h2>
         <%= yield %>
-    </body>
-    <footer>
+        <p><a class="btn btn-primary" href="javascript:window.location.reload()" role="button">new question</a></p>
+      </div>
+      <p>Results vary from boringly nonsensical to creepily accurate.</p>
+      <footer class="footer">
         <p>Powered by <a href="http://www.polygen.org/">polygen</a> and <a href="http://www.rubyonrails.org/">Ruby on Rails</a>.
-        Full <a href="https://bitbucket.org/Enucatl/polygen-ror/src/master/bin/progressreport.grm">grammar source code</a>.</p>
-    </footer>
+          Full <a href="https://bitbucket.org/Enucatl/polygen-ror/src/master/bin/progressreport.grm">grammar source code</a>.</p>
+      </footer>
+    </div>
+  </body>
 </html>
