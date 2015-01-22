@@ -1,5 +1,6 @@
 PolygenRor::Application.routes.draw do
   get "pr/question"
+  get "pr/motto"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

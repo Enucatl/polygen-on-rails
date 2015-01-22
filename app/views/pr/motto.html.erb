@@ -1,0 +1,9 @@
+<% polygen_name = polygen("polygen.grm") %>
+<% content_for :title, polygen_name + " Motto" %>
+<% content_for :description do %>My Description<% end %>
+
+<h2>Generator of mottoes</h2>
+<div class="row">
+<p class="lead"><%= polygen("motto.grm") %></h2>
+</div>
+<p><a class="btn btn-primary" href="javascript:window.location.reload()" role="button">new motto</a></p>

@@ -1,0 +1,44 @@
+I ::= "title:    Tomcat motto"
+^ "author:   Matteo\n"
+^ "language: english\n"
+^ "status:   \n"
+^ "topic:    \n"
+^ "audience: \n"
+^ "comment: \n"
+^ "created:  22/01/2015"
+;
+
+S ::= [TOMCAT] DESCRIPTION [^"," FORYOU];
+
+TOMCAT ::= "TOMCAT:"  | "TOMCAT 2:" | "TOMCAT 2.0:";
+
+DESCRIPTION ::= the ADJ NAME;
+
+FORYOU ::= where THING HAPPENS.;
+
+ADJ ::= perfect | outstanding | golden | coherent | brilliant | innovative |
+"cutting-edge" | "bleeding-edge" | bleeding | inadequate | passable | divine |
+extraterrestrial | titanic | supernatural | "world-class" | magnificent |
+brilliant | outstanding | formidable | excellent | solid | passable |
+inadequate | weak | poor | wretched | disastrous | nonexistent | magical |
+utopian | mythical | updated | smart | cool | fine | again | twice | cube |
+fresh | hot | power |  free | energy | safe | groove | funk[^y] | happy |
+jungle | young | fun | high | impossible | precious | accurate |
+"paradigm-shifting" | [very] low dose | undersampled | "real-time" | 4d | 
+[ultra]fast | (4th | 5th | 10th | next) generation ;
+
+NAME ::= ++beamline | +experiment | beamtime | reconstruction | microscopy |
+differential phase | image | slit | dose | gold standard | ground truth |
+reconstruction algorithm | tomography | cluster | throughput | mission | big
+data | acquisition | inspection | observation | [("Science" | "Nature")]
+paper | milestone | 
+patent;
+
+THING ::= your phase | science | a user | gold standard | technology |
+impossible | your passion | our passion | your proposal | your satisfaction
+| your time | our limit | your boundary | your imagination | innovation |
+service | a dream ;
+
+HAPPENS ::= is our best reward | does not fail | matters | shifts | can only be imagined |
+is routine | is respected | is fulfilled | feels at home | is guaranteed |
+happens | is reconstructed;

@@ -2,6 +2,8 @@
 <% content_for :title, polygen_name + " Questions" %>
 <% content_for :description do %>My Description<% end %>
 
+<h2>Generator of progress report questions</h2>
 <div class="row">
 <p class="lead"><%= polygen("progressreport.grm") %></h2>
 </div>
+<p><a class="btn btn-primary" href="javascript:window.location.reload()" role="button">new question</a></p>
